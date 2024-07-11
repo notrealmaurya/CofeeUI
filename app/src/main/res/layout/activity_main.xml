@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4D636363"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomLayoutMainActivity"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!--    first-->
+            <LinearLayout
+                android:id="@+id/firstlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="Kolkata, 70001"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:drawableStartCompat="@drawable/icon_location" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/profile"
+                    app:civ_border_color="#FFC276"
+                    app:civ_border_width="4dp" />
+
+
+            </LinearLayout>
+
+            <!--second-->
+            <LinearLayout
+                android:id="@+id/secondlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/firstlayout"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gotham"
+                        android:text="It is a great day"
+                        android:textColor="@color/white"
+                        android:textSize="30sp" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gotham"
+                            android:text="for a "
+                            android:textColor="@color/white"
+                            android:textSize="30sp" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gotham"
+                            android:text="coffee"
+                            android:textColor="#FFA825"
+                            android:textSize="30sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_nav_items"
+                    android:padding="15dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/icon_search" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <!-- Coupans -->
+            <LinearLayout
+                android:id="@+id/thirdLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secondlayout"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:paddingVertical="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/mainfont"
+                    android:text="Coupans"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:drawableEndCompat="@drawable/icon_coupan" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_ripplefactor"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="10dp"
+                    android:text="View All"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    app:drawableEndCompat="@drawable/icon_see_all" />
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/fourthLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/thirdLayout"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="1dp"
+                android:foregroundGravity="center_vertical"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:foregroundGravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="225dp"
+                            android:layout_height="95dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/coupan_first" />
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="225dp"
+                            android:layout_height="95dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/coupan_second" />
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="225dp"
+                            android:layout_height="95dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/coupan_third" />
+
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <!--    cofees-->
+
+            <HorizontalScrollView
+                android:id="@+id/fifthLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fourthLayout"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:foregroundGravity="center_vertical"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="75dp"
+                        android:layout_height="80dp"
+                        android:layout_marginHorizontal="3dp"
+                        android:background="@drawable/background_cappucino"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/icon_cappuccino" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/mainfont"
+                            android:text="Cappuccino"
+                            android:textColor="@color/white"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="75dp"
+                        android:layout_height="80dp"
+                        android:layout_marginHorizontal="3dp"
+                        android:background="@drawable/background_cofee_items"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/icon_expresso" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/mainfont"
+                            android:text="Expresso"
+                            android:textColor="@color/white"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="75dp"
+                        android:layout_height="80dp"
+                        android:layout_marginHorizontal="3dp"
+                        android:background="@drawable/background_cofee_items"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/icon_americano" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/mainfont"
+                            android:text="Americano"
+                            android:textColor="@color/white"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="75dp"
+                        android:layout_height="80dp"
+                        android:layout_marginHorizontal="3dp"
+                        android:background="@drawable/background_cofee_items"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/icon_latte" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/mainfont"
+                            android:text="Latte"
+                            android:textColor="@color/white"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="75dp"
+                        android:layout_height="80dp"
+                        android:layout_marginHorizontal="3dp"
+                        android:background="@drawable/background_cofee_items"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/icon_mocha" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/mainfont"
+                            android:text="Mocha"
+                            android:textColor="@color/white"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="75dp"
+                        android:layout_height="80dp"
+                        android:layout_marginHorizontal="3dp"
+                        android:background="@drawable/background_cofee_items"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/icon_macchia" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/mainfont"
+                            android:text="Macchia"
+                            android:textColor="@color/white"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
+
+
+            <!--    Today special-->
+
+            <FrameLayout
+                android:id="@+id/sixthLayout"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_below="@id/fifthLayout"
+                android:layout_marginHorizontal="20dp">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_blueberry" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="5dp"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/mainfont"
+                    android:text="Today's Special"
+                    android:textColor="@color/light_orange"
+                    android:textSize="11sp"
+                    app:drawableEndCompat="@drawable/icon_star" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="93dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/background_bluberry"
+                    android:orientation="vertical"
+                    android:paddingVertical="10dp"
+                    android:paddingStart="140dp"
+                    android:paddingEnd="0dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/mainfont"
+                        android:text="Bursting Blueberry"
+                        android:textColor="@color/white"
+                        android:textSize="17sp" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/mainfont"
+                            android:text="@string/line"
+                            android:textColor="#80FFFFFF"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/icon_star_white"
+                            android:drawablePadding="5dp"
+                            android:fontFamily="@font/mainfont"
+                            android:text=" \u20B9249"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/icon_star_empty"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/mainfont"
+                        android:text="4.8"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:background="@drawable/background_black"
+                    android:padding="7dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/icon_plus" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+            <!--    All capuchino-->
+
+            <TextView
+                android:id="@+id/seventhLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sixthLayout"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="20dp"
+                android:drawableStart="@drawable/icon_cappuccino_small"
+                android:text="All Cappuccinos"
+                android:textColor="@color/white" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/seventhLayout"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="10dp"
+                android:foregroundGravity="center_vertical"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="top"
+                            android:layout_marginStart="10dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/icon_dalgona" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="60dp"
+                            android:background="@drawable/background_diagona"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="10dp"
+                            android:paddingTop="30dp"
+                            android:paddingBottom="10dp">
+
+                            <TextView
+                                android:layout_width="90dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/mainfont"
+                                android:singleLine="false"
+                                android:text="Dalgona Whipped"
+                                android:textColor="@color/white"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gotham"
+                                android:text="\u20B9349"
+                                android:textColor="#FFFFFF"
+                                android:textSize="15sp" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@drawable/icon_star_empty"
+                                android:drawablePadding="3dp"
+                                android:text="4.8"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|end"
+                            android:background="@drawable/background_black"
+                            android:padding="7dp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/icon_plus" />
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="top"
+                            android:layout_marginStart="10dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/icon_cinnamon" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="60dp"
+                            android:background="@drawable/background_diagona"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="10dp"
+                            android:paddingTop="30dp"
+                            android:paddingBottom="10dp">
+
+                            <TextView
+                                android:layout_width="90dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/mainfont"
+                                android:singleLine="false"
+                                android:text="Cinnamon &amp; Cocoa"
+                                android:textColor="@color/white"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gotham"
+                                android:text="\u20B9199"
+                                android:textColor="#FFFFFF"
+                                android:textSize="15sp" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@drawable/icon_star_empty"
+                                android:drawablePadding="3dp"
+                                android:text="4.6"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|end"
+                            android:background="@drawable/background_black"
+                            android:padding="7dp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/icon_plus" />
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="top"
+                            android:layout_marginStart="10dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/icon_caramel" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="60dp"
+                            android:background="@drawable/background_diagona"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="10dp"
+                            android:paddingTop="30dp"
+                            android:paddingBottom="10dp">
+
+                            <TextView
+                                android:layout_width="90dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/mainfont"
+                                android:singleLine="false"
+                                android:text="Caramel Drizzled"
+                                android:textColor="@color/white"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gotham"
+                                android:text="\u20B9249"
+                                android:textColor="#FFFFFF"
+                                android:textSize="15sp" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@drawable/icon_star_empty"
+                                android:drawablePadding="3dp"
+                                android:text="4.8"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|end"
+                            android:background="@drawable/background_black"
+                            android:padding="7dp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/icon_plus" />
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--   Bottom Layout-->
+    <LinearLayout
+        android:id="@+id/bottomLayoutMainActivity"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/background_bottom"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_nav_items"
+                android:padding="12dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icon_home" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_nav_items"
+                android:padding="12dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icon_cart" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cart"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_nav_items"
+                android:padding="12dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icon_heart" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saved"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_nav_items"
+                android:padding="12dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icon_notification" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notification"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
